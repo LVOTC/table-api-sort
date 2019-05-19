@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('http://api-for-learning.herokuapp.com/fe1/get/5001').subscribe(data => {
+    this.http.get('https://api-for-learning.herokuapp.com/fe1/get/5001').subscribe(data => {
       this.data = data;
       this.dataSource = new MatTableDataSource(this.data['cards']);
       this.dataSource.paginator = this.paginator;
